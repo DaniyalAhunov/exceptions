@@ -13,23 +13,24 @@ https://docs.google.com/document/d/17EaA1lDxzD5YigQ5OAal60fOFKVoCbEJqooB9XfhT7w/
  */
 public class DZ_2 {
     //Задание 1
-    // public static void main(String[] args) {
-    //     Scanner sc = new Scanner(System.in); 
-    //         while (true) {
-    //             try {
-    //                 System.out.println("Введите дробное число: ");
-    //                 String numS = sc.nextLine();
-    //                 Double num = Double.parseDouble(numS);
-    //                 System.out.println("Ваше число: " + num);
-    //                 break;
-    //             }
-    //             catch (NumberFormatException e) {
-    //                 System.out.println("Число не дробное");
-    //                 System.out.println();
-    //             }    
-    //         }
+    public static void main(String[] args) {
+        try (Scanner sc = new Scanner(System.in)) {
+            while (true) {
+                try {
+                    System.out.println("Введите дробное число: ");
+                    String numS = sc.nextLine();
+                    Double num = Double.parseDouble(numS);
+                    System.out.println("Ваше число: " + num);
+                    break;
+                }
+                catch (NumberFormatException e) {
+                    System.out.println("Число не дробное");
+                    System.out.println();
+                }    
+            }
+        }
         
-    // }
+    }
     //Задание 2
     // Исключение попадает под законы математики исправлять только если само значение d fтк как на 
     // 0 делить нельзя по выходу получаем исключение
@@ -50,28 +51,28 @@ public class DZ_2 {
     // и исключений в языке Java
     // так же FileNotFoundException не к чему ведь файл мы ни какой не открываем
     // то есть соответсвенно пути здесь и быть не может
-    public static void main(String[] args) throws Exception {
-        try {
-            int a = 90;
-            int b = 3;
-            System.out.println(a / b);
-            printSum(23, 234);
-            int[] abc = { 1, 2 };
-            abc[8] = 9;
-        } catch (NullPointerException ex) {
-            System.out.println("Указатель не может указывать на null!");
-        } catch (IndexOutOfBoundsException ex) {
-            System.out.println("Массив выходит за пределы своего размера!");
-        } catch (Throwable ex) {
-            System.out.println("Что-то пошло не так...");
-        }
-     }
-     public static void printSum(Integer a, Integer b) //throws FileNotFoundException 
-     {
-        System.out.println(a + b);
-     }
+    // public static void main(String[] args) throws Exception {
+    //     try {
+    //         int a = 90;
+    //         int b = 3;
+    //         System.out.println(a / b);
+    //         printSum(23, 234);
+    //         int[] abc = { 1, 2 };
+    //         abc[8] = 9;
+    //     } catch (NullPointerException ex) {
+    //         System.out.println("Указатель не может указывать на null!");
+    //     } catch (IndexOutOfBoundsException ex) {
+    //         System.out.println("Массив выходит за пределы своего размера!");
+    //     } catch (Throwable ex) {
+    //         System.out.println("Что-то пошло не так...");
+    //     }
+    //  }
+    //  public static void printSum(Integer a, Integer b) //throws FileNotFoundException 
+    //  {
+    //     System.out.println(a + b);
+    //  }
     // public static void main(String[] args) {
-        
+        // пока что не разобрался со строкой если есть какие то коментарии был бы рад услышать
     // }
      
 }
